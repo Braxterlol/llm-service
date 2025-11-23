@@ -1,0 +1,15 @@
+# LLM Feedback Service - Dependencies
+
+# FastAPI
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.4.2
+pydantic-settings==2.0.3
+
+google-generativeai==0.8.3
+
+# HTTP Client (para llamadas a otros servicios)
+httpx==0.25.2
+
+# Utilities
+python-dotenv==1.0.0
