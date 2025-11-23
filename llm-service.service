@@ -1,0 +1,32 @@
+[Unit]
+Description=LLM Feedback Service - API de generación de feedback con IA
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/llm-service
+Environment="PATH=/opt/llm-service/venv/bin"
+ExecStart=/opt/llm-service/venv/bin/python /opt/llm-service/main.py
+
+# Reiniciar automáticamente si falla
+Restart=always
+RestartSec=10
+
+# Configuración de seguridad
+NoNewPrivileges=true
+PrivateTmp=true
+
+# Límites de recursos
+LimitNOFILE=65535
+LimitNPROC=4096
+
+# Logs
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=llm-service
+
+[Install]
+WantedBy=multi-user.target
+
