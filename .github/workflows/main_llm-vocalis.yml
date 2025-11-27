@@ -63,4 +63,4 @@ jobs:
         with:
           app-name: 'llm-vocalis'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EFF1DA86582D47ED9EE9059F6D837348 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9CD6CE06290840D48799ADFE44B1A93B }}
